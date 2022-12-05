@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f15e5c2c575f6495e8ae2ddf127ede78
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - candy: {fileID: 3293461773847634592, guid: 9c6558dbd66dc4c7b86849d8ec3962b6, type: 3}
+  - blob: {fileID: 1430614798602994753, guid: d09db3e4add550e4bb25363304983636, type: 3}
+  - mesh: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
