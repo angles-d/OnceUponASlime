@@ -178,6 +178,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (!speedBoost && veggieCount > 0 && Input.GetKeyDown(KeyCode.V))
             {
+                aud.InventorySelectVegSound();
                 speed += boost;
                 rotateSpeed += rotBoost;
                 veggieCount--;

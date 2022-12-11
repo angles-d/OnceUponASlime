@@ -10,6 +10,8 @@ public class PauseGame : MonoBehaviour
 
     public AudioSource bgSound1;
     public AudioSource bgSound2;
+
+    public AudioManager aud;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,8 @@ public class PauseGame : MonoBehaviour
 
     public void Pause_Play()
     {
+        aud.PauseSound();
+
         if (!gamePaused)
         {
             Time.timeScale = 0f;

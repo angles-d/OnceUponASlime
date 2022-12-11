@@ -22,14 +22,6 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        //if (Instance != null && Instance != this)
-        //{
-        //    Destroy(this);
-        //}
-        //else
-        //{
-        //    Instance = this;
-        //}
 
         foreach (AudioClip sound in audioClips)
         {
@@ -41,12 +33,17 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void SlimeBounceSound(Vector3 position)
+    public void PauseSound()
+    {
+        audioSource.PlayOneShot(aud["Menu_Pause"]);
+    }
+
+    public void SlimeBounceSound()
     {
         audioSource.PlayOneShot(aud["Slime_Slide_Loop"]);
     }
 
-    public void SlimeShrinkSound(Vector3 position)
+    public void SlimeShrinkSound()
     {
         audioSource.PlayOneShot(aud["Slime_Shrink"]);
     }
@@ -79,7 +76,7 @@ public class AudioManager : MonoBehaviour
 
     public void PickupVegetableSound()
     {
-        audioSource.PlayOneShot(aud["Select_Veg"]);
+        audioSource.PlayOneShot(aud["Veg_Grab"]);
     }
 
     public void DragonRoarSound(Vector3 position)
@@ -91,7 +88,10 @@ public class AudioManager : MonoBehaviour
     public void DragonStepSound(Vector3 position)
     {
         int randInd = Random.Range(0, dragonStepSounds.Length);
+        //print(randInd);
+        //print(dragonStepSounds[randInd]);
         AudioSource.PlayClipAtPoint(dragonStepSounds[randInd], position);
+        //audioSource.PlayOneShot(dragonStepSounds[randInd]);
     }
 
     public void DragonFireSound(Vector3 position)

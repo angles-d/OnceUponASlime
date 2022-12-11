@@ -228,6 +228,11 @@ public class DragonController : MonoBehaviour
         roar = false;
     }
 
+    public void PlayStomp()
+    {
+        aud.DragonStepSound(transform.position);
+    }
+
     
 
 
