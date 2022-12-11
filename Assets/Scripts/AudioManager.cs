@@ -52,6 +52,11 @@ public class AudioManager : MonoBehaviour
         audioSource.PlayOneShot(aud["Slime_Grow"]);
     }
 
+    public void SlimeJumpSound()
+    {
+        audioSource.PlayOneShot(aud["Slime_Jump"]);
+    }
+
     public void SlimeMeltSound()
     {
         audioSource.PlayOneShot(aud["Slime_Melt"]);
@@ -163,10 +168,7 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(aud["KeyCollected"]);
     }
-    public void SlimeJumpSound()
-    {
-        audioSource.PlayOneShot(aud["Bunny_Bounce"]);
-    }
+    
 
     public void winSound() {
 

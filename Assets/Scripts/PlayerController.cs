@@ -158,6 +158,7 @@ public class PlayerController : MonoBehaviour
     {
         if (size >= 1)
         {
+            
             StartCoroutine(SlowShrink());
             size--;
 
@@ -174,9 +175,10 @@ public class PlayerController : MonoBehaviour
 
         float elapsedTime = 0;
         float waitTime = 0.2f;
-
+        audioPlayer.SlimeShrinkSound();
         while (elapsedTime < waitTime)
         {
+            
             transform.parent.localScale = Vector3.Lerp(current, target, (elapsedTime / waitTime));
             elapsedTime += Time.deltaTime;
             yield return null;
@@ -190,6 +192,7 @@ public class PlayerController : MonoBehaviour
     {
         if (size <= 6)
         {
+            
             StartCoroutine(SlowGrow());
             size++;
 
@@ -207,6 +210,7 @@ public class PlayerController : MonoBehaviour
         float elapsedTime = 0;
         float waitTime = 0.2f;
 
+        audioPlayer.SlimeGrowSound();
         while (elapsedTime < waitTime)
         {
             transform.parent.localScale = Vector3.Lerp(current, target, (elapsedTime / waitTime));
